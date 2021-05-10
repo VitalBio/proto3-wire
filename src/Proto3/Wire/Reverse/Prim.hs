@@ -112,7 +112,7 @@ import           Data.Word                     ( Word16,
                                                  byteSwap64 )
 import           Foreign                       ( Storable(..) )
 import           GHC.Exts                      ( Addr#, Int#, Proxy#,
-                                                 RealWorld, State#, (+#),
+                                                 RealWorld, State#, Word#, (+#),
                                                  and#, inline, or#,
                                                  plusAddr#, plusWord#, proxy#,
                                                  uncheckedShiftRL# )
@@ -141,7 +141,6 @@ import           Proto3.Wire.Reverse.Width     ( AssocPlusNat(..),
 import GHC.IntWord64 (Word64#)
 type WORD64 = Word64#
 #else
-import GHC.Exts (Word#)
 type WORD64 = Word#
 #endif
 
